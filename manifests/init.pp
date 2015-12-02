@@ -5,8 +5,12 @@
 class apache2 (
   $ensure         = hiera('apache2::ensure', 'installed'),
 ) {
-    package { 'apache2':
+    package { 'httpd':
       ensure => $ensure,
+    } ->
+    
+    service {'httpd':
+      ensure => 'running',
     }
     
 }
