@@ -13,7 +13,7 @@ class apache2 (
     
     file { '$configfile':
       mode      =>    '0755',
-      content   =>    template('httpd.erb'),
+      content   =>    template('apache2/httpd.erb'),
       notify    =>    Service['httpd']
     
     }
