@@ -1,0 +1,16 @@
+#Listen <%= @port_number %>
+
+# This is the "main" server running on 172.20.30.40
+ServerName <%= @actualServername %>.domain.com
+#DocumentRoot /www/mainserver
+
+# This is the other address
+#NameVirtualHost 172.20.30.50
+
+<VirtualHost *:80>
+  DocumentRoot /www/example1
+  ServerName <%= @actualServername %>
+
+  # Other directives here ...
+
+</VirtualHost>
