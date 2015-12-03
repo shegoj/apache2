@@ -12,7 +12,7 @@ class apache2::vhost (
       $actualServername = $servername
     }
   
-    file { 'etc/httpd/conf/httpd2.conf1':
+    file { '/etc/httpd/conf/httpd2.conf1':
       content    =>   template  ('apache2/vhost.erb'),
       mode       =>   '0755',
       notify     =>   Service['httpd']
