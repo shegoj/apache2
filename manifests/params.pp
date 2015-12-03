@@ -5,7 +5,7 @@ class apache2::params  {
 
   $version          =   'installed'
   $configfile       =   '/etc/httpd/conf/httpd.conf'
-  $port_number      =   '8081'
+  $port_number      =   '8080'
   $vhost_type       =   'name_based'
   $vhost_servername =   undef
 }
